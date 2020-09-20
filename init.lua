@@ -77,10 +77,10 @@ cmodal:bind('', 'tab', 'Toggle Cheatsheet', function() spoon.ModalMgr:toggleChea
 if not hsapp_list then
     hsapp_list = {
         {key = 'f', name = 'Finder'},
-        {key = 's', name = 'Safari'},
-        {key = 't', name = 'Terminal'},
-        {key = 'v', id = 'com.apple.ActivityMonitor'},
-        {key = 'y', id = 'com.apple.systempreferences'},
+        {key = 'c', name = 'Google Chrome'},
+        {key = 't', name = 'iTerm'},
+        {key = 'v', name = 'Visual Studio Code'},
+        {key = 's', name = 'Slack'}
     }
 end
 for _, v in ipairs(hsapp_list) do
@@ -115,10 +115,6 @@ end
 if spoon.ClipShow then
     spoon.ModalMgr:new("clipshowM")
     local cmodal = spoon.ModalMgr.modal_list["clipshowM"]
-    cmodal:bind('', 'escape', 'Deactivate clipshowM', function()
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
     cmodal:bind('', 'Q', 'Deactivate clipshowM', function()
         spoon.ClipShow:toggleShow()
         spoon.ModalMgr:deactivate({"clipshowM"})
@@ -129,18 +125,9 @@ if spoon.ClipShow then
     cmodal:bind('', 'R', 'Restore last Session', function()
         spoon.ClipShow:restoreLastSession()
     end)
+    -- TODO: This open in Browser does not seem to work
     cmodal:bind('', 'B', 'Open in Browser', function()
         spoon.ClipShow:openInBrowserWithRef()
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
-    cmodal:bind('', 'S', 'Search with Bing', function()
-        spoon.ClipShow:openInBrowserWithRef("https://www.bing.com/search?q=")
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
-    cmodal:bind('', 'M', 'Open in MacVim', function()
-        spoon.ClipShow:openWithCommand("/usr/local/bin/mvim")
         spoon.ClipShow:toggleShow()
         spoon.ModalMgr:deactivate({"clipshowM"})
     end)
@@ -155,12 +142,7 @@ if spoon.ClipShow then
         spoon.ModalMgr:deactivate({"clipshowM"})
     end)
     cmodal:bind('', 'G', 'Search with Google', function()
-        spoon.ClipShow:openInBrowserWithRef("https://www.google.com/search?q=")
-        spoon.ClipShow:toggleShow()
-        spoon.ModalMgr:deactivate({"clipshowM"})
-    end)
-    cmodal:bind('', 'L', 'Open in Sublime Text', function()
-        spoon.ClipShow:openWithCommand("/usr/local/bin/subl")
+        spoon.ClipShow:openInBrowserWithRef("https://google.com/search?q=")
         spoon.ClipShow:toggleShow()
         spoon.ModalMgr:deactivate({"clipshowM"})
     end)
