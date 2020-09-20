@@ -6,7 +6,7 @@ awesome-hammerspoon is my configuration for [Hammerspoon](http://www.hammerspoon
 
 1. Install [Hammerspoon](http://www.hammerspoon.org/) first.
 
-2. `git clone https://github.com/ashfinal/awesome-hammerspoon.git ~/.hammerspoon`
+2. `git clone https://github.com/wweic/awesome-hammerspoon.git ~/.hammerspoon`
 
 3. Reload the configutation.
 
@@ -22,7 +22,7 @@ Press <kbd>opt</kbd> + <kbd>?</kbd> to toggle the help panel, which will show al
 
 ### Screenshots
 
-These screenshots demostrate what awesome-hammerspoon is capable of. Learn more about [built-in Spoons](https://github.com/ashfinal/awesome-hammerspoon/wiki/The-built-in-Spoons).
+These screenshots demostrate what awesome-hammerspoon is capable of. Learn more about [built-in Spoons](https://github.com/wweic/awesome-hammerspoon/wiki/The-built-in-Spoons).
 
 #### Desktop widgets
 
@@ -58,7 +58,7 @@ These screenshots demostrate what awesome-hammerspoon is capable of. Learn more 
 
 ![hsearch](https://github.com/ashfinal/bindata/raw/master/screenshots/awesome-hammerspoon-aria2.png)
 
-You need to [run aria2 with RPC enabled](https://github.com/ashfinal/awesome-hammerspoon/wiki/Run-aria2-with-rpc-enabled) before using this. Config aria2 host and token in `~/.hammerspoon/private/config.lua`, then you're ready to go.
+You need to [run aria2 with RPC enabled](https://github.com/wweic/awesome-hammerspoon/wiki/Run-aria2-with-rpc-enabled) before using this. Config aria2 host and token in `~/.hammerspoon/private/config.lua`, then you're ready to go.
 
 ```lua
 hsaria2_host = "http://localhost:6800/jsonrpc" -- default host
@@ -81,7 +81,7 @@ Then modify the file `~/.hammerspoon/private/config.lua`:
 
 - Add/remove Spoons.
 
-  Define `hspoon_list` to decide which Spoons (a distributing format of Hammerspoon module) to be loaded. There are 15 built-in Spoons, learn about them at [here](https://github.com/ashfinal/awesome-hammerspoon/wiki/The-built-in-Spoons).
+  Define `hspoon_list` to decide which Spoons (a distributing format of Hammerspoon module) to be loaded. There are 15 built-in Spoons, learn about them at [here](https://github.com/wweic/awesome-hammerspoon/wiki/The-built-in-Spoons).
 
   *There are more Spoons at [official spoon repository](http://www.hammerspoon.org/Spoons/) (you may need a little config before using them).*
 
