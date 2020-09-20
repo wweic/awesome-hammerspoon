@@ -70,6 +70,11 @@ tiling.set('layouts', {
   'fullscreen', 'main-vertical'
 })
 
+hhtwm = require('hhtwm') -- it's recommended to make `hhtwm` a global object so it's not garbage collected.
+hhtwm.defaultLayout = 'main-left'
+hhtwm.start()
+
+
 ----------------------------------------------------------------------------------------------------
 -- Then we create/register all kinds of modal keybindings environments.
 ----------------------------------------------------------------------------------------------------
