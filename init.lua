@@ -55,25 +55,28 @@ for _, v in pairs(hspoon_list) do
     hs.loadSpoon(v)
 end
 
-local tiling = require "hs.tiling"
-local hotkey = require "hs.hotkey"
-local mash = {"ctrl", "cmd"}
+-- hhtwm = require('hhtwm') -- it's recommended to make `hhtwm` a global object so it's not garbage collected.
+-- hhtwm.defaultLayout = 'main-left'
+-- hhtwm.start()
 
-hotkey.bind(mash, "c", function() tiling.cycleLayout() end)
-hotkey.bind(mash, "j", function() tiling.cycle(1) end)
-hotkey.bind(mash, "k", function() tiling.cycle(-1) end)
-hotkey.bind(mash, "space", function() tiling.promote() end)
-hotkey.bind(mash, "f", function() tiling.goToLayout("fullscreen") end)
+-- local bind = function(key, fn)
+--     hs.hotkey.bind({ 'ctrl', 'shift', 'alt' }, key, fn, 'hhtwm', fn)
+-- end
 
--- If you want to set the layouts that are enabled
-tiling.set('layouts', {
-  'fullscreen', 'main-vertical'
-})
-
-hhtwm = require('hhtwm') -- it's recommended to make `hhtwm` a global object so it's not garbage collected.
-hhtwm.defaultLayout = 'main-left'
-hhtwm.start()
-
+-- -- [r]eset
+-- bind('r', hhtwm.reset)
+-- -- re[t]ile
+-- bind('t', hhtwm.tile)
+-- -- [c]enter window
+-- bind('c', function()
+--   local win = hs.window.frontmostWindow()
+--   local log = hs.logger.new('init', 'debug');
+--   if not hhtwm.isFloating(win) then
+--     hhtwm.toggleFloat(win)
+--   end
+--   log.d('center function called')
+--   win:centerOnScreen()
+-- end)
 
 ----------------------------------------------------------------------------------------------------
 -- Then we create/register all kinds of modal keybindings environments.
